@@ -1,0 +1,164 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    font-size: 14px ;
+    background:turquoise;
+}
+
+h1 {
+    margin: 5px 0px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+}
+
+
+nav > div {
+    
+    border-left: 1px solid black;
+    padding: 10px;
+    font-family: roboto,sans-serif;
+    background: white;
+    background-color: white;
+}
+
+.homenavdiv {
+    margin-left: auto;
+}
+
+nav > img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.heroimagediv {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    
+}
+
+.heroimage1 {
+    max-height: 100%;
+}
+
+nav a {
+    color:black;
+    background: white;
+}
+
+nav a:active {
+    color: whitesmoke;
+    background-color: green;
+}
+
+main {
+   
+    padding: 20px 150px;
+}
+
+ul {
+    line-height: 2em;
+}
+
+
+
+/* 
+------------------------------------------ all below is for big screen
+ */
+@media only screen and (min-width:850px) {
+
+
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    font-size: 20px ;
+    background:turquoise;
+}
+
+h1 {
+    margin: 20px 0px;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 80px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+}
+
+
+nav > div {
+    
+    border-left: 1px solid black;
+    padding: 10px;
+    font-family: roboto,sans-serif;
+    background: white;
+    background-color: white;
+}
+
+.homenavdiv {
+    margin-left: auto;
+}
+
+nav > img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.heroimagediv {
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    
+}
+
+.heroimage1 {
+    max-height: 100%;
+}
+
+nav a {
+    color:black;
+    background: white;
+}
+
+nav a:active {
+    color: whitesmoke;
+    background-color: green;
+}
+
+main {
+   
+    padding: 20px 150px;
+}
+
+ul {
+    line-height: 2em;
+}
+
+}

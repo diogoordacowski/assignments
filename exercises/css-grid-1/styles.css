@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 10px 5px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 25px; 
+}
+
+header {
+    font-size: 22px;
+    background-color: dodgerblue;
+    text-align: center;
+    grid-column: 1 / 13;
+}
+
+/* 1 - 4 */
+nav {
+    background-color: darkorchid;
+    grid-column: 8 / 13;
+}
+
+nav > div {
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* 5 - 12 */
+main {
+    background-color: darkgreen;
+    grid-column: 1 / 8;
+    grid-row: 2 / 3;
+}
+
+/* 1 - 12 */
+footer {
+    font-size: 20px;
+    background-color: darkslateblue;
+    text-align: center;
+    grid-column: 1 / span 12;
+}
+
+/* GRID CONTAINER 2 */
+
+#grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 
+  swap the 4 - 6 👍🏼
+  swap the 7 - 3 👍🏼
+  swap the 7 - 2 👍🏼
+  9 - 1          👍🏼
+*/
+
+#box1 {
+    background-color: blue; 
+    grid-column: 3 / 4;  
+    grid-row: 3 / 4; 
+}
+
+#box2 {
+    background-color: red;   
+}
+
+#box3 {
+    background-color: yellow;  
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+}
+
+#box4 {
+    background-color: green;  
+    grid-column: 3 / 4;  
+    grid-row: 2/3;
+}
+
+#box5 {
+    background-color: purple;
+    grid-row: 2 / 3;
+
+}
+
+#box6 {
+    background-color: grey;   
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3;
+}
+
+#box7 {
+    background-color: teal; 
+    grid-column: 3 / 4; 
+    grid-row: 1 / 2;
+}
+
+#box8 {
+    background-color: violet;  
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;
+}
+
+#box9 {
+    background-color: orange; 
+    grid-column: 1 / 2;  
+    grid-row: 1 / 2;
+}
+
+#grid-container2 > div {
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
