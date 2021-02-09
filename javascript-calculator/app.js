@@ -1,5 +1,7 @@
 const readline = require("readline-sync")
 
+console.log("You are running app.js")
+
 var num1 = Number(readline.question("Please enter your first number: "))
 var num2 = Number(readline.question("Please enter your second number: "))
 var operation = readline.question("Please enter the operation to perform: add, sub, mul, div ")
