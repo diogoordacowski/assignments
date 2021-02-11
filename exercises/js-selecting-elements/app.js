@@ -4,16 +4,16 @@
 
 var result7 = document.getElementById("specialparagraph")
 console.log(result7)
-result7.textContent = "I overrode the original HTML content with javascript"
+result7.textContent = "I overrode the original html content with javascript"
 
-//getElementsByClassName & getElementsByTag - most commonly used. Brings back an array-like object that can be treated as an array where you may specify the return value with [0]. If nothing has the specified class name or tag name, it returns an EMPTY ARRAY
+//getElementsByClassName & getElementsByTag - most commonly used. Brings back an array-like object that can be treated as an array where you may specify the return value with something like [0] or [1] etc. If nothing has the specified class name or tag name, it returns an EMPTY ARRAY
 
 var thing = document.getElementsByClassName("things")
 console.log(thing)
 
 for (var i = 0; i < thing.length; i++) {
     console.log(thing[i].innerHTML)
-    thing[i].textContent = "Overriding text " + i
+    thing[i].textContent = "Overriding text with for loop " + i
 }
 
 var things2 = document.getElementsByClassName("things2")
@@ -48,8 +48,34 @@ console.log(Array.from(result5))
 var result6 = document.querySelectorAll("#favorite-things > li")
 
 for (var i = 0; i < result6.length; i++) {
-    result6[i].textContent = "Classified"
+    result6[i].textContent = "Original html content is classified"
 }
 
+/*
+1. Select the h3 element
+ * 2. Save the h3 element's text to a variable
+ * 3. Change the paragraph element's text to be the same as the text inside the h3
+*/
+
+var h3 = document.getElementById("h3text").textContent
+console.log(h3)
+
+document.getElementById("placeholder").textContent = h3
 
 
+/*
+1. Select the h4 element
+ * 2. Save the h4 element's text to a variable
+ * 3. Change the paragraph element's text to be the same as the text inside the h4
+*/
+
+var h4 = document.querySelector("#h4text")
+console.log(h4)
+
+h4.style.color = "red"
+
+/*
+1. Select the whole page, or in other words, the <body> element
+ * 2. Change the whole page's background color to something interesting
+*/
+document.body.style.backgroundColor = "burlywood"
