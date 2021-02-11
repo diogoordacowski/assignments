@@ -1,0 +1,19 @@
+#specialparagraph {
+    color:green;
+    margin: 25px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.things2 {
+    color:hotpink;
+    margin: 25px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18;
+}
+
+h1 {
+    margin-bottom: 20px;
+    border-bottom: grey dotted 1px;
+    padding-bottom: 1em;
+}
