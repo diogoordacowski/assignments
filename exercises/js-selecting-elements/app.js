@@ -79,3 +79,21 @@ h4.style.color = "red"
  * 2. Change the whole page's background color to something interesting
 */
 document.body.style.backgroundColor = "burlywood"
+
+// modifying CSS classes within elements with className. Notice how the console.log for this returns 3 total classes when the html only has 2. It records 3 classes as PLAIN STRING, making this not ideal for multiple manipulations as you'd have to parse out the string. 
+
+var h5 = document.querySelector("#header").className += " new-class"
+console.log(h5) 
+
+// modifying CSS classes within elements with classList
+
+document.querySelector("#header2").classList.add("burger") // ADD: adds a new class called 'burger' with javascript
+console.log(document.querySelector("#header2").className + " // NOTE: burger is added") 
+document.querySelector("#header2").classList.remove("title") // REMOVE:  removes an existing class called 'title' which came from the original html 
+console.log(document.querySelector("#header2").className + " // NOTE: title is removed") 
+document.querySelector("#header2").classList.toggle("burger") // TOGGLE:  if class 'burger' exists then remove it, but if it doesn't exist, then add it. HERE IT REMOVES 'BURGER'
+console.log(document.querySelector("#header2").className + " // NOTE: burger is removed") 
+document.querySelector("#header2").classList.toggle("burger") // TOGGLE: (see above definition) HERE IT ADDS 'BURGER'
+console.log(document.querySelector("#header2").className + " // NOTE: burger is added") 
+
+

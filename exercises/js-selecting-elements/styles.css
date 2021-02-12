@@ -19,7 +19,7 @@
 }
 
 h1 {
-    margin:10px 0px;
+    margin:15px 0px;
     border-bottom: grey dotted 1px;
     padding: 10px 0px;
     width: 800px;
@@ -33,5 +33,15 @@ h1 {
     align-items: center;
     justify-content: center;
     font-size: 30px;
-
 }
+
+#header {
+    font-size: 20px;
+    color: blue;
+}
+
+#header2 {
+    font-size: 20px;
+    color:rebeccapurple;
+}
+
