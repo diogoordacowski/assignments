@@ -96,4 +96,3 @@ console.log(document.querySelector("#header2").className + " // NOTE: burger is 
 document.querySelector("#header2").classList.toggle("burger") // TOGGLE: (see above definition) HERE IT ADDS 'BURGER'
 console.log(document.querySelector("#header2").className + " // NOTE: burger is added") 
 
-
