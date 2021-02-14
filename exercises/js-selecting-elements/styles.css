@@ -21,8 +21,9 @@
 h1 {
     margin:15px 0px;
     border-bottom: grey dotted 1px;
-    padding: 10px 0px;
+    padding: 10px 5px;
     width: 800px;
+    background-color: ivory;
 }
 
 .background-disclaimer {

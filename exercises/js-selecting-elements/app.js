@@ -103,3 +103,44 @@ console.log(inputBox.value)
 
 inputBox.value = "I changed this prefilled input tag value with javascript"
 
+// creating new HTML elements and giving them values with createElement() method
+
+var myList = document.getElementById("my-list");
+var newLi = document.createElement("li");
+var newLi2 = document.createElement("li");
+
+newLi.textContent = "This li was added with javascript append() and is not present in the original html"
+newLi2.textContent = "This li was added with javascript prepend() and is not present in the original html"
+
+myList.append(newLi);
+myList.prepend(newLi2);
+
+
+var jsParagraph = document.getElementById("js-paragraph");
+var newParagraph = document.createElement("p");
+
+newParagraph.textContent = "This is a brand new paragraph <p> element added with javascript and does not exist in the original html. It has been styled with javascript as well."
+
+newParagraph.style.textAlign = "center"
+newParagraph.style.fontSize = "20px"
+newParagraph.style.color = "green"
+
+jsParagraph.append(newParagraph);
+console.log(newParagraph.textContent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
