@@ -96,3 +96,10 @@ console.log(document.querySelector("#header2").className + " // NOTE: burger is 
 document.querySelector("#header2").classList.toggle("burger") // TOGGLE: (see above definition) HERE IT ADDS 'BURGER'
 console.log(document.querySelector("#header2").className + " // NOTE: burger is added") 
 
+// modifying HTML value from a form input
+
+var inputBox = document.getElementById("text-input")
+console.log(inputBox.value)
+
+inputBox.value = "I changed this prefilled input tag value with javascript"
+
