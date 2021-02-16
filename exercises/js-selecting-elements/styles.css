@@ -26,6 +26,15 @@ h1 {
     background-color: ivory;
 }
 
+h2 {
+    margin:15px 0px;
+    border-bottom: grey dotted 1px;
+    padding: 10px 5px;
+    width: 400px;
+    background-color: ivory;
+    color:grey;
+}
+
 .background-disclaimer {
     width: 800px;
     height: 200px;
@@ -50,3 +59,6 @@ input {
     width: 600px;
 }
 
+li {
+    line-height: 2em;
+}
