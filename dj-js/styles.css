@@ -1,0 +1,35 @@
+* {
+   box-sizing: border-box; 
+   background-color: #BEB6AB;
+}
+
+#square {
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+.container {
+    position: relative;
+    top:50px;
+    display: flex;
+   /*  border: 1px solid black; */
+    justify-content: center;
+}
+
+h1 {
+  /*   border: 1px solid black; */
+  font-family: 'Stalinist One', cursive;
+  padding: 10px 25px;
+}
+
+@media only screen and (min-width:650px) {
+    #square {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+        border-radius: 10px;
+    }
+
+}
