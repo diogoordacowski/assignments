@@ -1,0 +1,19 @@
+form {
+    margin: 20px 5px;
+}
+
+#h2-inputs {
+    margin-bottom: 20px;
+}
+
+.special {
+    background-color: peachpuff;
+    width: 800px;
+}
+
+button {
+    display: block;
+    margin: 15px 5px;
+    padding: 8px 25px;
+    font-size: 24px;
+}

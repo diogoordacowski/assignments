@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Forms</title>
+</head>
+<body>
+    <h1 class="special">All inputs below DON'T share the same &ltform&gt</h1>
+    <h1>Input type="text" is selected through 'name' attribute</h1>
+    <form name = "my-form">     <!--the 'name' attribute here allows us to retrieve the form element much quicker than 'id' or 'class' (check out the syntax in js file line 1)-->
+        <input type="text" name="firstName" placeholder="First Name" required/> <!--'required' attribute forces browser to evaluate for an input natively-->
+        <input type="text" name="last-name" placeholder="Last Name" />
+        <button>Submit</button>
+    </form>
+    <div id="h2-inputs"></div>
+    <h1>Input type="text" is selected through 'id' attribute attribute</h1>
+    
+    <form id="my-other-form">   <!--  -the 'name' attribute here allows us to retrieve the form element much quicker than 'id' or 'class' (check out the syntax in js file line 1)-->
+        <input type="text" />
+        <button>Submit</button>
+    </form>
+
+    <h1>Input type="radio"</h1>
+    By applying the 'name' attribute equally on all radios, only 1 is able to be selected at a time
+    <form name="radioForm" >   
+        Male: <input type="radio" name="gender" value="Male"/>
+        Female: <input type="radio" name="gender" value="Female" />
+        No Answer: <input type="radio" name="gender" value="No Answer" />
+        <button>Submit</button>
+    </form>
+
+    <h1>Input type="checkbox"</h1>
+    Checkboxes are appropriate for multiple selections, and not a singular one like the radio above. 
+
+    <p>SELECT FOOD ITEMS YOU LIKE:</p>
+    <form name="check-box-form" >   
+        Carrots <input type="checkbox" value="Carrots" name="foods" />
+        Bananas <input type="checkbox" value="Bananas" name="foods" />
+        Donuts <input type="checkbox" value="Donuts" name="foods"/>
+        Bagels <input type="checkbox" value="Bagels" name="foods" />
+        <button>Submit</button>
+    </form>
+
+    <h1 class="special">All inputs below share the same &ltform&gt</h1>
+        <form name="bundleForm"> 
+
+            <h1>Input type="select"</h1>
+
+            <select name="city">
+                <option>Paris</option>
+                <option>Rio de Janeiro</option>
+                <option>New York City</option>
+            </select>
+
+            <h1>Input type="number"</h1>    
+                <p>Notice that as you interact with the input box, it rejects letters and provides a step counter  </p>
+                <input type="number" />
+
+            <h1>Input type="tel"</h1>   
+                <input type="tel" />
+
+            <h1>Input type="password"</h1>   
+                <input type="password" />
+
+            <h1>Input type="date"</h1>   
+                <input type="date" />
+            
+            <h1>Input type="color"</h1>   
+                <input type="color" /> 
+                
+        <button>Submit</button>
+
+        </form>
+
+<script src="app.js"></script>
+</body>
+</html>

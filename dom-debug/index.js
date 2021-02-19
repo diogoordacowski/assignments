@@ -14,7 +14,7 @@ function createDropDown(){
         dropDown.append(option)
     }
     dropDown.addEventListener("change", function(e){
-        console.log(e.target.value )
+       
 
         e.target.parentElement.style.backgroundColor = e.target.value
        
@@ -22,7 +22,7 @@ function createDropDown(){
     return dropDown
 }
 
-function createSubItem(e){
+function createSubItem(){
     const subItem = document.createElement("div")
     subItem.style.border = "1px solid black"
     var subItemValue = document.getElementById("input").value
