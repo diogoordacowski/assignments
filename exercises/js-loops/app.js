@@ -26,7 +26,7 @@ for (var i = 0; i < numbers.length; i++) {
     } 
 }
 
-// WHILE LOOP EXAMPLE 1
+// WHILE LOOP EXAMPLE 1 // while loops keep going as long as something is true. It is a great way to deal with things when the length is not determinable
 
 var cars = ['mustang', 'viper', 'bmw', 'alfa-romeo', 'passat']
 var carsCount = 0
@@ -35,3 +35,53 @@ while (carsCount < cars.length ) {
     console.log(cars[carsCount])
     carsCount++
 }
+
+// log "hooray" for every party in the array
+
+var eventsAtWork = ["work", "pretend to work", "party", "work", "meeting", "party", "daily grind", "work", "party"]
+
+for (var i = 0; i < eventsAtWork.length; i++) {
+    if (eventsAtWork[i] === "party") {
+        console.log("hooray")
+    }
+}
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+// count all of the trues in the array
+
+var booleans = [true, true, false, true, false, false, false]
+let count = 0
+
+for (var i = 0; i < eventsAtWork.length; i++) {
+    if (booleans[i] === true) {
+        count = count + 1
+    }
+}
+
+console.log(count)
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+// Add an isAdmin property to each of the users in this array.
+
+var users = [
+    {
+      name: "Sophie",
+      age: 12
+    },
+    {
+      name: "Larry",
+      age: 32
+    },
+    {
+      name: "Cathy",
+      age: 40
+    }
+  ]
+
+for (var i = 0; i < users.length; i++) {
+    users[i].isAdmin = null
+}
+
+console.log(users[0])
