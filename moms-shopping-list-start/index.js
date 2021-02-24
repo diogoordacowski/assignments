@@ -6,7 +6,7 @@ myForm.addEventListener("submit", function(e) {
   
     const itemName = myForm.title.value
     
-    myForm.title.value = ""
+    /* myForm.title.value = "" */ // unecessary
 
     const myItem = document.createElement("li") // creating list item
     const itemTitle = document.createElement("div") // creating the title of item
@@ -26,7 +26,7 @@ myForm.addEventListener("submit", function(e) {
    
     myList.append(myItem)  
 
-    console.log(myList,000)
+
     const deleteButton = document.getElementsByName("delete") // gets Node List of all delete buttons 
 
     for (var i = 0; i < deleteButton.length; i++) {

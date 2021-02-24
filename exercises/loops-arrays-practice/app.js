@@ -73,3 +73,24 @@ if(countOfToggles % 2 === 0) {
     console.log(countOfToggles + " The light is OFF")
 } else console.log(countOfToggles + " The light is ON")
 
+//   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+
+// NESTED LOOPS: run your loop through EACH item inside each array
+
+var arrayOfArrays = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for (var i = 0; i < arrayOfArrays.length; i++) {
+    for (var s = 0; s < arrayOfArrays[i].length; s++) {
+        console.log(arrayOfArrays[i][s])
+    }
+}
+
+console.log(arrayOfArrays[1][2]) // this console.logs the number 6 which is in index 2 of index 1
+console.log(arrayOfArrays[0][0]) // this console.logs the number 1 which is in index 0 of index 0
+console.log (arrayOfArrays[2][2]) // this console.logs the number 9 which is index 2 of index 2
+
+//   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -

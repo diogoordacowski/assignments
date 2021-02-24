@@ -19,15 +19,17 @@ const choice = readline.keyInSelect(options, "What would you like to do next? ")
         console.log("You have a key!")
     } 
     
-    else if (choice === 2 ) {
-        if (hasKey === true) {
+    else if (choice === 2 && hasKey) {
+       
             console.log("you escaped")
-            break
-        } else 
-            console.log("you need a key to open the door") 
-    } 
+            playerIsAlive = false
+    }
+
+    else if (choice === 2 && hasKey === false) {
+        console.log("you need a key to open the door")
+    }     
     
     else console.log("the game has ended and you have not escaped")
-    break
+    
         
 }
