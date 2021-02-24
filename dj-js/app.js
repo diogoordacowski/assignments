@@ -28,6 +28,10 @@ function makeOrange() {
     square.style.backgroundColor = "#F79862";
 }
 
+function makePink() {
+    square.style.backgroundColor = "pink";
+}
+
 function keyCommands(event) {
     let exactKey = event.which;
 
@@ -41,7 +45,10 @@ function keyCommands(event) {
         makeGreen();
     } else if (exactKey === 79) {
         makeOrange();
-    } else {
+    } else if (exactKey === 80) {
+        makePink();
+    } 
+    else {
         console.log("no valid color key was pressed")
     }
 
