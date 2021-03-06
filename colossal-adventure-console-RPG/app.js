@@ -1,7 +1,8 @@
 // THIS JS FILE WORKS
 // INSTRUCTIONS: https://coursework.vschool.io/colossal-adventure-console-rpg/
 
-var readlineSync = require('readline-sync');
+var readlineSync = require('readline-sync') // to make things interactive
+const chalk = require('chalk'); // to make things fun and colorful
 
 // set the stage for game sequence continuation
 let isAlive = true
@@ -27,7 +28,7 @@ const runAway = function() {
 
 // create the player object
 let player = {
-    name: readlineSync.question("\nLet's play Capoeira Adventure!\n\nMay I have your apelido?"),
+    name: readlineSync.question("\nLet's play Capoeira Adventure where the axé runs thick! O ia iá!\n\nMay I have your apelido? "),
     health: 100,
     inventory: [],
     damageMax: 30,
@@ -61,16 +62,16 @@ const walkingAction = function (arr) {
     return arr[randomWalk]
 }
 
-console.log(`Hi ${player.name}! `)
+console.log(`\nHi ${player.name}!\n `)
     
 while (isAlive) {
     
     // choice from player
-    const input = readlineSync.keyIn("What would you like to do? [t] Train, [i] Iventory, [q] Quit ", {limit:["t", "i", "q"]}) 
+    const input = readlineSync.keyIn("What would you like to do? [t] Train, [i] Iventory, [q] Quit: ", {limit:["t", "i", "q"]}) 
 
     if (input === "t") {
         //walk
-        console.log(`You are ${walkingAction(walkingTypes)}...`)
+        console.log(`\nYou are ${walkingAction(walkingTypes)}...\n`)
         let randomEncounter = Math.floor(Math.random() * 4)
         
             if (randomEncounter === 0) {
@@ -81,11 +82,11 @@ while (isAlive) {
                 // random enemy must be selected
                 let randomEnemy = Math.floor(Math.random() * enemies.length)
                 let enemyChosen = enemies[randomEnemy]
-                console.log(`An enemy is approaching... it is ${enemyChosen.name}!`)
+                console.log(`\nAn enemy is approaching... it is` + chalk.yellow(` ${enemyChosen.name}!\n`))
 
                 while (isBattling) {
                     // choice from player
-                    const input2 = readlineSync.keyIn("What would you like to do? [a] attack, [r] run ", {limit:["a" ,"r"]}) 
+                    const input2 = readlineSync.keyIn(`\nWhat would you like to do ${player.name}? [a] attack, [r] run: `, {limit:["a" ,"r"]}) 
             
                     if (input2 === "a") {
                         // player attacks
@@ -96,7 +97,7 @@ while (isAlive) {
                         enemyChosen.health -= playerAttack
                         player.health -= enemyAttack
             
-                        console.log (`You attacked ${enemyChosen.name} and reduced his health by ${playerAttack}\n${enemyChosen.name} attacked you, ${player.name}, and reduced your health by ${enemyAttack}%`)
+                        console.log (`\nYou attacked ${enemyChosen.name} and reduced his health by ${playerAttack}\n${enemyChosen.name} attacked you, ${player.name}, and reduced your health by ${enemyAttack}%`)
                         
                         // console.log(player.name, player.health, enemyChosen.name, enemyChosen.health)
             
@@ -125,7 +126,7 @@ while (isAlive) {
                     if (player.health <= 0) {
                         isAlive = false
                         isBattling = false
-                        console.log(`\nYou couldn't withstand the intense quebra gereba.\n\nVocê morreu irmão\n\nVá com Deus jogar nas rodas do além`)
+                        console.log(`\nYou couldn't withstand the intense quebra gereba.\n\nVocê morreu irmão\n\nVá com Deus jogar nas rodas do além\n`)
 
                     } else if (player.health > 0 && enemyChosen.health <= 0) {
                         isBattling = false
@@ -136,13 +137,13 @@ while (isAlive) {
                         player.inventory.push(enemyChosen.item)
                         player.health += healing
 
-                        console.log(`\nYou killed ${enemyChosen.name}!\n\nAs you walk over his carcass, you grab his ${enemyChosen.item} to store in your inventory for later.\n\nYou consume his axé and heal by ${healing} points`)
-
+                        console.log(chalk.red(`\nYou killed ${enemyChosen.name}!\n`) +`\nAs you walk over his carcass, you grab his ${enemyChosen.item} to store in your inventory for later.\n\nYou consume his axé and heal by ${healing} points` )
+                        
                         statusBar()
 
                         if (enemies.length === 0) {
                             isAlive = false
-                            console.log(`You, ${player.name}, are a true capoeira Mestre. Salve!`)
+                            console.log(chalk.green(`You win ${player.name}!\n\n`) + `You have defeated all enemies and are a true capoeira Mestre. Salve!\n`)
                         }
 
                         
