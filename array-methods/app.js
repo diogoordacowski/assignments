@@ -54,3 +54,11 @@ console.log(food)
 var stringFruits =  food.join()
 
 console.log(stringFruits)
+
+
+var container = document.getElementById("container")
+
+container.textContent = "text"
+
+container.style.backgroundColor = "green"
+

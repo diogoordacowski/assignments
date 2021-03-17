@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <title>Simple HTML Calculator</title>
+    </head>
+    <body>
+        <form name="calculator">
+
+            <div class="calculator-box">
+                
+                <div class="answer-box" id="mainDisplay">Enter Numbers</div>
+                <input type="number" class="calc-display" value="0" name="display1" />
+                <input type="number" class="calc-display" value="0" name="display2" />
+                
+                
+                <div class="container-buttons">
+                    <div class="container-operations" id="operation-buttons">
+                        <div class="operations" id="multiply" >x</div>
+                        <div class="operations" id="sum" >+</div>
+                        <div class="operations" id="subtract" >-</div>
+                        <div class="operations" id="divide" >÷</div>
+                    </div>
+
+                    <div class="container-run">
+                        <button class="run" id="equal">=</button>
+                        <div class="run" id="clear">c</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script src="app.js"></script>
+    </body>
+</html>

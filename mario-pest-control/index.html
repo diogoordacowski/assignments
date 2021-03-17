@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mario's Pest Control</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container-body">
+            <header>
+                <div>
+                    <h1 class="title">Mario's Pest Control</h1>
+                </div>
+            </header>        
+        
+            <section>
+                <ul id="ulItems">
+                    <li id="goomba">
+                        <div class="char-image" >
+                            <img src="goomba.png" />
+                        </div>
+
+                        <div class="char-name">
+                            <h2 >Goomba</h2>
+                        </div>
+                        
+                        <div class="char-details">
+                            <p ><span class="price">5 </span>coins</p>
+                        </div>
+                        
+                        <div class="issues-count">
+                            <input type="number" min="0" placeholder="0" height="80%" id="goomba"/>
+                        </div>
+                    </li>  
+                    
+                    <li id="bobomb">
+                        <div class="char-image" >
+                            <img src="bob-omb.png" class="char-image" />
+                        </div>  
+                        
+                        <div class="char-name">
+                            <h2 >Bob-omb</h2>
+                        </div>
+                        
+                        <div class="char-details">
+                            <p ><span class="price">7 </span>coins</p>
+                        </div>
+
+                        <div class="issues-count">
+                            <input type="number" min="0" placeholder="0" height="80%" id="bobomb" />
+                        </div>
+                    </li>
+
+                    <li id="cheepcheep">
+                        <div class="char-image" >
+                            <img src="cheep-cheep.png" class="char-image" />
+                        </div>     
+                        
+                        <div class="char-name">
+                            <h2 >Cheep-cheep</h2>
+                        </div>
+                        
+                        <div class="char-details">
+                            <p ><span class="price">11 </span>coins</p>
+                        </div>
+                        
+                        <div class="issues-count">
+                            <input type="number" min="0" placeholder="0" height="80%" id="cheepcheep" />
+                        </div>
+                    </li> 
+                </ul>
+                
+            </section>       
+
+            <aside>
+                <div class="container-total">
+                    <div class="total">Total:</div>
+                    <div class="result" id="result">...</div>               
+                </div>
+            </aside>
+
+            <footer>
+                <div class="footer-content">
+                    <span class="footer-title">Email Mario</span>
+                    <span class="footer-info">mario@screwbowser.com</span>
+    
+                    <span class="footer-title">Mario's Site</span>
+                    <span class="footer-info">www.marioworld.com</span>
+    
+                    <span class="footer-title">Mario's House</span>
+                    <span class="footer-info">123 Mushroom Lane</span>
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

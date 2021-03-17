@@ -1,0 +1,109 @@
+html, body {
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornflowerblue;
+}
+
+.calculator-box {
+    background-color: #00D497;
+    width: 400px;
+    height: 450px;
+    margin: 20px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(73, 72, 72);
+}
+
+
+.calc-display {
+    border-radius: 10px;
+    height: 2em;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 350px;
+    font-size: 1.5em; 
+    text-align: right; 
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .5px ;   
+    background-color: whitesmoke; 
+}
+
+.answer-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 350px;
+    font-size: 1.8em; 
+    height: 65px;    
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .5px ; 
+    padding: 10px 5px;
+    background-color: rgb(204, 204, 204);
+    color:rgb(82, 80, 80);
+    overflow-wrap: break-all;
+  
+}
+
+.container-buttons > div > div, button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(73, 72, 72);
+    font-size: 1.5em;
+}
+
+.container-buttons > div > div:focus {
+    outline:none !important
+}
+
+.container-operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);  
+    grid-gap: 8px;   
+    margin: 15px 30px; 
+    height: 50px;  
+    
+}
+
+.container-run {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);  
+    grid-gap: 8px;   
+    margin: 15px 30px; 
+    height: 50px;  
+}
+
+#equal {
+    grid-column: 1 / 4;
+}
+
+.operations {
+    background-color: #94EBFF;
+}
+
+.run {
+    background-color: #FFD449 ;
+}
+
+.operationActive {
+    background-color: #34b3cf;
+    box-shadow: none !important
+}
+
+.runActive {
+    background-color: #e2b10d;
+    box-shadow: none !important
+}
+
+
+

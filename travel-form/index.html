@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Travel Form</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <form name="travelForm">
+
+            <h1>Passenger Info</h1>
+
+          
+            <input type="text" name="firstName" id="firstName" placeholder=". . . first name" required />
+
+            
+            <input type="text" name="lastName" id="lastName" placeholder=". . . last name" required />
+
+            <label for="age" id="ageLabel">Age</label>
+            <input type="number" name="age" id="age" min="0" max="20000000" placeholder=". . . age" />
+
+            
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="male" id="maleLabel">Male</label>
+
+            <input type="radio" name="gender" id="female" value="Female" />
+            <label for="female" id="femaleLabel">Female</label>
+  
+            <h1>Travel Info</h1>
+            
+            <label for="destination" id="destinationLabel">Choose a destination</label>
+            <select name="destination" id="destination" >
+                <option value="" disabled selected hidden>. . . choose</option>
+                <option value="Itacaré">Itacaré</option>
+                <option value="Joaquina">Joaquina</option> 
+                <option value="Arpoador">Arpoador</option>
+            </select>
+                  
+            <h2>Dietary Restrictions</h2>
+                
+            <input type="checkbox" name="dietaryRestrict" id="restriction1" value="Vegetarian">
+            <label for="restriction1" id="restriction1Label">Vegetarian</label>
+
+            <input type="checkbox" name="dietaryRestrict" id="restriction2" value="Lactose Free">
+            <label for="restriction2" id="restriction2Label">Lactose Free</label>
+
+            <input type="checkbox" name="dietaryRestrict" id="restriction3" value="Kosher">
+            <label for="restriction3" id="restriction3Label">Kosher</label>  
+
+            <div class="submitButton" id="submit">
+                <button>Submit</button>
+            </div>
+        </form>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>

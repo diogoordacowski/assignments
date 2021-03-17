@@ -1,0 +1,164 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #A1ADFF;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
+    letter-spacing: 0.2em;
+    margin: 0px;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+    background-color: #A1ADFF;
+}
+
+
+.title {
+   background-color: #DD5918;
+   color: #FFDDC9;
+   font-size: 80px;
+   padding: 20px 20px;
+   border-radius: 2px;
+   box-shadow: inset 3px 3px 3px #FFDDC9;
+   box-shadow: 3px 3px 5px 3px #000000;
+}
+
+section, aside {
+   margin: 0% 10%;
+}
+
+ul {
+    padding: 0px;
+}
+
+
+li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr) ;
+    margin-bottom: 60px;
+    border-bottom: 2px dashed #DE5918 ;
+    padding-bottom: 30px;
+}
+
+.char-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    
+}
+.char-image > img {
+    width: 300px;
+    height: 325px;
+}
+
+li > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+li > div > h2, p, input {
+    margin: 0px;
+}
+
+input {
+    text-align: right;
+    width: 30%;
+    height: 80%;
+    font-size: 3.5em;
+    font-family: 'DotGothic16', sans-serif;
+    border-radius: 15px;
+}
+
+
+.char-name {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 1.5em;
+    letter-spacing: 10px;
+    color: #3BB900;
+    text-shadow: 2px 5px 2px #1a5001 ;    
+    
+}
+
+.char-details {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+}
+
+.price {
+    color: #f8df1f ;
+}
+
+
+.issues-count {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.container-total {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    font-size: 3em;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 3 / 4 ;
+}
+
+.result {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 4 / 5 ;
+    margin-bottom: 1em;
+    color: #f8df1f;
+}
+
+footer {
+    background-color: #DD5918 ;
+    padding: 0% 8%;
+    border-top: 50px solid #DD5918;
+    border-bottom: 50px solid #DD5918;
+
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(3, 3em);
+
+}
+
+.footer-title {
+    grid-column: 1 / 2;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: flex-end;
+    overflow-wrap: normal;
+    grid-column: 2 / 3;
+    font-size: 1.6em;
+}
+
+
+
+
+
+
+
+
