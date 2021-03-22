@@ -1,0 +1,31 @@
+# .forEach
+Returns: Undefined 
+Purpose: Used in place of a for-loop
+    Caveat: For-loops allow you to customize where the loop starts, stops, and increments by.
+            forEach will always loop the entire length of the array.
+            
+# .find()
+Returns: The first item it finds in the array that matches your criteria
+Purpose: Finding an item in an array
+
+# .findIndex()
+Returns: The index number of the first item it finds in the array that matches your criteria
+Purpose: Finding the index number of an item in an array
+
+# .some()
+    Returns: Returns true if at least one item in the array matches your criteria, false otherwise
+    Purpose: To see if something exists in an array
+    
+
+# .every()
+    Returns: Returns true if EVERY item in the array matches your criteria, false otherwise.
+    Purpose: To see if Everything in an array matches your criteria
+
+# .sort()
+    Returns: The array sorted but sort also mutates the original array, so capturing the returned value is not necessary.
+    Purpose: To sort an unsorted array of items.
+
+# .reduce()
+Returns: Whatever you want it to! (See video for explanation)
+Purpose: Take an array of data and Reduce it into a smaller or completely different data set.
+
