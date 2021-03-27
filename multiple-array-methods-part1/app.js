@@ -48,7 +48,7 @@ var peopleArray = [
 
 function arrayMethodFunction(array) {
 
-array.sort((a,b) => (a.lastName > b.lastName) ? 1 : -1)
+array.sort((a,b) => (a.lastName > b.lastName) ? 1 : -1) 
 
 const adults = array.reduce(function(final, person){
 

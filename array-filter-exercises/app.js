@@ -2,7 +2,7 @@
 
 const numbers = [3, 4, 1, 6, 8, 2, 5, 60, -1, -3, 18, 4.9]
 
-const fiveAbove = numbers.filter(num => num >=5)
+const fiveAbove = numbers.filter(num => num >= 5)
 
 console.log(fiveAbove)
 
