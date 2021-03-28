@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+}
+
+body {
+    background-color: #F96363;
+    
+}
+
+.container {
+    position: relative;
+    left: 25px;
+    top:15px;
+    border: 2px solid black;
+    border-radius: 2%;
+    width: 750px;
+    background-color: #969598;
+    box-shadow: 5px 5px 15px 3px #343334;
+}
+
+.title {
+    margin: 25px;
+}
+
+h1 {
+    margin: 0px;
+    font-size: xxx-large;
+}
+
+.deck {
+    display: grid;
+    grid-gap:30px;
+    margin: 25px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5%;
+    font-size: xxx-large;
+    box-shadow: 3px 3px 10px 2px #343334;
+    color: #cececf;
+    -webkit-text-stroke: 1.5px black;
+    transition: border-radius 0.15s ease-in 0.05s, color 0.15s ease-in 0.05s, -webkit-text-stroke 0.15s ease-in 0.05s;
+}
+
+.buttons:hover {
+    border-radius: 2px 50% 2px;
+    color: black;
+    -webkit-text-stroke: 1px whitesmoke;
+}
+
+#one,#two,#three {
+    grid-row: 1 / 2;
+}
+
+#four,#five,#six {
+    grid-row: 2 / 3;
+}
+
+#one {
+    background-color: #44D4B4;
+}
+
+#one:hover {
+    background-color: #1367C1;
+} 
+
+#two {
+    background-color: #FB70B6;
+}
+
+#two:hover {
+    background-color: #00D5FF;
+    
+} 
+
+#three {
+    background-color: #3C046C;
+}
+
+#three:hover {    
+    background-color: #CD37A8;
+    
+} 
+
+#four {
+    background-color: #83579E;
+}
+
+#four:hover {
+    background-color: #72FF47;
+    
+} 
+
+#five {
+    background-color: #CAAACC;
+}
+
+#five:hover {
+    background-color: #FF480E
+    
+} 
+
+#six {
+    background-color: #24544C;
+}
+
+#six:hover {
+    background-color: #FF6DF9;
+    
+} 
+
+audio {
+    position:absolute;
+    left: 40px;
+    top:750px;
+
+}
+

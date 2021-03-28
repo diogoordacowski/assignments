@@ -1,0 +1,20 @@
+#box {
+    position:relative;
+    left: 100px;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 35px;
+    background-color: chocolate;
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+    transition: background-color 2s linear 0.5s, border-radius 1s linear 0.5s; 
+}
+
+#box:hover{
+    background-color: cornflowerblue;
+    border-radius: 5px 50% 5px ;
+}
