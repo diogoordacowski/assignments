@@ -1,0 +1,352 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    line-height: 1.8;
+    font-family: 'Libre Baskerville', serif;
+    
+}
+
+
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    font-size: 3.2em;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.6em;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    font-weight: lighter;
+    color:#b0c7ba;
+}
+
+h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-size: 1em;
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(6, minmax(170px, auto));
+   
+}
+.container > div {
+    padding: 25px 80px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cta > div {
+   text-align: center;
+   color: white;
+   padding: 20px;
+   font-size: x-large;
+   background-color: rgb(185, 185, 185);
+   opacity: 0.40;
+}
+
+.authors {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.authors-container, .links-container {
+    padding: 10px 80px 10px 40px;
+}
+
+.single-author {
+    border-bottom: 1px solid #b8c3be;
+    padding-bottom: 20px;
+    margin:20px 0px;
+}
+
+h4 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.25em;
+    font-weight: lighter;
+}
+
+.links {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+ul {
+    list-style-type: none;
+    padding: 35px 140px 0px 40px;
+}
+
+li {
+    font-family:'Julius Sans One', sans-serif;
+    border-bottom: 1px solid #b8c3be;
+    padding: 25px 0px;
+    font-size: 1.3em;
+}
+li:nth-last-child(1){
+    border-bottom: 1px solid #b8c3be;;
+}
+
+.footer1, .footer2 {
+    grid-column: 1 / 3;
+}
+
+.container > div:nth-child(-n+2) {
+    background-image: url("huntington.jpg");
+    background-attachment: fixed;    
+    background-size: cover;
+}
+
+.container > div:nth-child(4), .links {
+    background-image: url("bamboo.png");
+    background-color: #C1DACC;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("koi.jpg");
+    background-size: cover;
+    z-index: 2;
+    font-size: 2em;
+}
+
+.footer1 > div {
+    padding: 40px 80px;
+    text-align: center;
+    color: #C7D1CF;
+}
+
+.footer2 {
+    background-color: #134347;
+    z-index: 2;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;   
+}
+
+.icons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border: 2.5px solid #89A1A3;
+    border-radius: 50%;
+    margin: 10px 40px;
+}
+
+.icons > div > i {
+    color: #89A1A3;
+}
+
+em {
+    color:#B5C8C4;
+}
+
+.sidelayer {
+    position: fixed;
+    right:0;
+    top: 0;
+    width: 33.3%;
+    height: 100%;
+    background-color: #566859;
+    opacity: 0.10;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 1200px){
+ 
+    p {
+      font-size: .85em;
+    }
+
+    h1 {
+        font-weight: lighter;
+        font-size: 2em;
+        margin-top: 10px;
+    }
+
+    .cta {
+        display:flex;
+        justify-content: center;
+        background-color: rgb(185, 185, 185);
+        opacity: 0.75;   
+    }
+
+    .cta > div {
+        color: white;
+        font-size: 1.5em;
+        background: none;
+        opacity: none;
+        font-family: 'Julius Sans One', sans-serif;
+        padding: 0px;
+     }
+
+
+    h3 {
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+
+    h4 {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: 1em;
+        font-weight: lighter;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: repeat(9, minmax(50px, auto)) ;
+        min-width: 300px;
+    }
+
+    .container > div {
+        grid-column: 1 / 2;
+        padding: 5px 50px;
+    }
+
+    .container > div:nth-child(6) {
+        display: none;
+    }
+
+    .footer1 {
+        grid-row: 6 / 7 ;
+        font-size: 1.2em;
+    }
+
+    .footer1 > div {
+        padding: 30px 40px;
+        text-align: center;
+        color: #C7D1CF;
+    }
+
+    .footer2 {
+        grid-row: 7 / 8 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+  
+    .authors {
+         grid-row: 8 / 9;
+         background-color: #EFF5F2;
+    }
+
+    .single-author {
+        border-bottom: 1px solid #b8c3be;
+        padding-bottom: 10px;
+        margin:0px 0px;
+    }
+
+    .authorship {
+        font-size: .8em;
+    }
+
+    .links {
+        grid-row: 9 / 10;
+        background-image: url("bamboo.png");
+        background-color: #C1DACC;
+    }
+
+    .sidelayer {
+        display: none;
+    }
+
+    .icons {
+        padding-top: 0px;   
+    }
+
+    .icons > div {
+        width: 45px;
+        height: 45px;
+        border: 2px solid #89A1A3;
+        border-radius: 50%;
+        margin: 10px 20px;
+    }
+
+    .authors-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:repeat(4, 1fr) ;
+        padding-left: 15%;
+    }
+
+    .authors-container > div:nth-child(odd) {
+        grid-column: 1 / 2;
+        padding-right: 10px;
+    }
+
+    .authors-container > div:nth-child(even) {
+        grid-column: 2 / 3;
+        padding-left: 15%;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .links-container {
+        padding-left: 15%;
+    }
+
+    li {
+        font-size: 1em;
+        padding: 0px 0px;
+    }
+
+    li:nth-child(odd) {
+        grid-column: 1 / 2;
+        padding-right: 10px;
+    }
+
+    li:nth-child(even) {
+        grid-column: 2 / 3;
+        padding-left: 15%;
+    }
+
+    
+  
+}
