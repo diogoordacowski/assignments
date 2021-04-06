@@ -117,7 +117,7 @@ console.log(username, _id)
 
 const names = ["Diogo", "John", "Mike"]
 
-const [n1, n2, n3] = names // this is the instance of array destructuring and alllows to efficiently refer to items within the object. Because arrays have order, they will be retrieved in this deconstructor by the order it exists
+const [n1, n2, n3] = names // this is the instance of array destructuring and allows to efficiently refer to items within the object. Because arrays have order, they will be retrieved in this deconstructor by the order it exists
 
 console.log(n1)
 
