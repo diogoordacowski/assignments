@@ -1,0 +1,123 @@
+{
+    "appetizers": [
+        {
+            "name": "Buffalo Wings",
+            "ingredients": [
+                "Chicken Wings",
+                "Seasoning"
+            ],
+            "description": "Fried organic chicken wings with our house seasoning mix and homemade ranch dip"
+        },
+        {
+            "name": "Pot Stickers",
+            "ingredients": [
+                "Ground Pork",
+                "Cabbage",
+                "Green Onion",
+                "Flour"
+            ]
+        }
+    ],
+
+    "cold sandwiches": [
+        {
+            "name": "Club Sandwich",
+            "ingredients":[
+                "Wheat Bread",
+                "Tomtato",
+                "Lettuce",
+                "Bacon",
+                "Mayo",
+                "Ham",
+                "Avocado"
+            ],
+            "description": "All organic produce makes up this bad boy. Comes with special house dressing and a side of fries"
+        },
+        {
+            "name": "Cold Cuts",
+            "ingredients": [
+                "Salami",
+                "Ham",
+                "Pepperoni",
+                "Roast Beef",
+                "Colby Jack Cheese",
+                "Lettuce",
+                "Tomato",
+                "Olive Oil"
+            ],
+            "description": "A meat delight with subtle hints of simple salt, pepper, and olive seasoning."
+        }
+        
+    ],
+
+    "hot sandwiches": [
+        {
+            "name": "Baurú",
+            "ingredients": [
+                "Mozzarella",
+                "Roast Beef",
+                "Tomato",
+                "Pickles",
+                "Lettuce",
+                "French bun with crumb removed"
+            ],
+            "description": "A Brazilian favorite. Is a sandwich served hot and melted in bain-marie slices of roast beef"
+        },
+        {
+            "name": "Grilled Cheese",
+            "ingredients":[
+                "Cheddar Cheese",
+                "Parmesan",
+                "Colby Jack Cheese",
+                "House Dressing",
+                "White Sour Dough Bread"
+            ],
+            "description": "Fire grilled to a smokey taste and served with sweet potato fries on the side"
+        }
+    ],
+
+    "desserts": [
+        {
+            "name": "Pudim de leite",
+            "ingredients": [
+                "Condensed milk",
+                "Sugar",
+                "Eggs"
+            ],
+            "description": "A traditional brazilian-style pudding with caramelized syrup"
+        },
+        {
+            "name": "Quimdim",
+            "ingredients": [
+                "Eggs",
+                "Sugar", 
+                "Lemon Juice",
+                "Butter",
+                "Coconut Milk",
+                "Shredded Coconut"
+            ],
+            "description": "An intensely yellow custard common in the Salvador, Bahia area of Brazil"
+        }
+    ],
+
+    "drinks": [
+        {
+            "name": "Limonada",
+            "ingredients": [
+                "Sugar",
+                "Lime",
+                "Condensed milk",
+                "Honey"
+            ],
+            "description": "A tangy and sweet Brazilian lemonade"
+        },
+        {
+            "name": "Suco de Maracuja",
+            "ingredients": [
+                "Sugar",
+                "Passion Fruit"
+            ],
+            "description": "Sweetened passion fruit juice"
+        }
+    ]
+}

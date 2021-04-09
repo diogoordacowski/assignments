@@ -17,13 +17,16 @@ console.log(collectAnimals("dog", "cat", "mouse", "jackolope", "platypus"))
 // 2) Write a function that returns a food object with the array names as properties using Object Literals:
 
 function combineFruit(fruits, sweets, vegetables){
-    let food = {
+    
+
+   let food = {
         fruits: fruits,
         sweets: sweets,
         vegetables: vegetables
     }
     
     return food
+
 }
 
 console.log(combineFruit(["apple", "pear"],["cake", "pie"],["carrot"]), `\n`)
@@ -100,7 +103,7 @@ function product(...nums) {
     }, 1)
   }
 
-console.log(product(1,2,3,4,5, 6, 7, 8, 9, 10), `\n`)
+console.log(product(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), `\n`)
 
 // 8) Make the following function more ES6xy. Use at least both the rest and spread operators:
     /* function unshift(array, a, b, c, d, e) {  
