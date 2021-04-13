@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.mastersection {
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding-bottom: 30px;
+}
+
+.titlecontainer {
+    border-bottom: 2px solid black;
+    text-align: center;
+    background-color: #DB4C3F;
+}
+
+.todoitemscontainer {
+    border: 1px solid green;
+}
+
+.todocardcontainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(3, minmax(50px, auto));
+    background-color: ivory;
+    border-bottom: 4px solid black;
+}
+
+.todoimage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.todostatus {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.tododelete {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.todoedit {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.todotitle {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.tododescription {
+    grid-column: 3 / 4;
+    grid-row: 2 /3;
+}
+
+.todoprice {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+@media screen and (min-width: 600px) {
+    .mastercontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border: 1px solid yellow;
+        grid-gap: 30px;
+    }
+
+    .initial {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .latter {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+}

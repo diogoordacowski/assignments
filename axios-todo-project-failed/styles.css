@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin:0px;
+}
+
+body {
+    background-color: grey;
+    border: 2px solid white;
+    padding: 20px;
+}
+
+button {
+    margin: 15px 0px;
+}
+
+.topsection{
+    padding: 20px 0px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    margin: 10px 0px;
+}
+
+.titlecontainer {
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    border: 2px solid brown;
+}
+
+.addnewcontainer {
+    border: 2px solid blue;
+    margin: 5px 0px;
+}
+
+.addnewcardcontainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(3, minmax(50px, auto));
+    background-color: ivory;
+    border: 4px solid rgb(5, 248, 5);
+    margin: 10px 0px;
+}
+
+.addnewimage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.addnewstatus {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.addnewdelete {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.addnewedit {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.addnewtitle {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.addnewdescription {
+    grid-column: 3 / 4;
+    grid-row: 2 /3;
+}
+
+.addnewprice {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+
+
+.todocontainer {
+    border: 2px solid red;
+    margin: 5px 0px;
+}
+
+.todocardcontainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(3, minmax(50px, auto));
+    background-color: ivory;
+    border: 4px solid green;
+    margin: 10px 0px;
+}
+
+.todoimage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.todostatus {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.tododelete {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.todoedit {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.todotitle {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.tododescription {
+    grid-column: 3 / 4;
+    grid-row: 2 /3;
+}
+
+.todoprice {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}

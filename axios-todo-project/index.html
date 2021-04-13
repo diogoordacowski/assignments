@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Axios Todo</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "mastercontainer">
+            <form name="todoform">
+                <input placeholder="Title" id="newtitle" name ="newtitle" required/>
+                <input placeholder="Price" id="newprice" name = "newprice" required />
+                <input placeholder="Description" id="newdescription" name = "newdescription" required />
+                <input placeholder="Image Url" id="newimage" name = "newimage" required />
+                <button>Submit</button>
+
+            </form>
+            <div id="jscontent"></div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+
+</html>
