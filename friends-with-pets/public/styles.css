@@ -1,0 +1,42 @@
+body {
+    background-color: #9d8189;
+    font-family: 'Overpass Mono', monospace;
+}
+
+.container {
+    width: 680px;
+    border: 1px solid black;
+    margin: 15px 20px;
+    padding: 15px 45px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px rgb(73, 70, 70);
+    background-color: #f4acb7;
+}
+
+.friend-card {
+    border: 1px solid black;
+    padding:10px 30px;
+    margin:10px 0px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px rgb(87, 84, 84);
+    background-color: #d8e2dc;
+}
+
+.friend-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+.pet-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pet {
+}
