@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color:#D5E2BC ;
+}
+
+.container {
+    width: 650px;
+    padding: 10px 25px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #A6979C ;
+    margin: 15px 25px;
+    box-shadow: 3px 3px 3px #312a2d;
+}
+
+.container > div {
+    border: 2px solid grey;
+    padding-left: 15px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px #A6979C;
+    margin: 10px 0px;
+   
+}
+
+.spring {
+    background-color: #FCB97D;
+}
+
+.summer {
+    background-color: #EDD892 ;
+}
+
+.winter {
+    background-color: #AABA9E;
+}
+
+.fall {
+    background-color: #C6B89E;
+}

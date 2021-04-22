@@ -68,10 +68,27 @@ function getData() {
                 if (res.data[i].completed === true) {
                     status.setAttribute("checked", true)
                 }
+
+                // res.data[i].completed && status.setAttribute("checked", true)
+                
                 todoCard.appendChild(status)
                 status.addEventListener("click", e => {
                     console.log(e.target.checked)
                     const statusId = e.target.parentElement.id
+
+                   /*  if(condition){
+                        run if condition is true
+                    }else {
+                        run if condition is false
+                    }
+
+                    condition ? run if condition is true : run if condtion is false */
+                   // let age = 4
+                   // let name = age > 12 ? 'Big Joe' : 'Little Joe'
+
+                   // updates = e.target.checked ? {completed: true } : {completed: false }
+
+
                      if (e.target.checked === false) {
                         updates = {
                             completed: false
@@ -96,18 +113,18 @@ function getData() {
                 deleteButton.setAttribute("class", "delete")
                 todoCard.appendChild(deleteButton)
                 deleteButton.addEventListener("click", e => {
-                    console.log(e.target)
+                   /*  console.log(e.target)
                     const itemToDelete = e.target.parentElement
                     const itemToDeleteName = itemToDelete.firstChild.textContent
                     const deleteItemId = itemToDelete.id
-                    console.log(itemToDelete, itemToDeleteName, deleteItemId)
+                    console.log(itemToDelete, itemToDeleteName, deleteItemId) */
                     
-                    const checkDelete = confirm(`Are you sure you want to delete "${itemToDeleteName}"`)
+                    const checkDelete = confirm(`Are you sure you want to delete "${res.data[i].title}"`)
 
-                    if (checkDelete === true) {
+                    if (checkDelete) {
                         //delete http request
                         console.log("deleting http request")
-                        axios.delete(`${baseUrl}/${deleteItemId}`)
+                        axios.delete(`${baseUrl}/${res.data[i]._id}`)
                             .then(res => {
                                 console.log(res.data)
                                 getData()
