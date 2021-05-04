@@ -1,0 +1,85 @@
+body {
+    background-image: url(http://www.transparenttextures.com/patterns/vintage-speckles.png);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Changa', sans-serif;
+    font-size: 16px;
+    color: #FBF2EC;
+}
+
+.dj-deck-container, .button-container, .square-container, .square, button {
+    box-shadow: 6px 3px rgba(0, 0, 0, 0.377);
+}
+
+.dj-deck-container {
+    position:relative;
+    left:45px;
+    top:25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 950px;
+    padding: 35px 0px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #36A696;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    height: 400px;
+    width: 150px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    background-color: #FFE945;
+}
+
+.square-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    padding: 22px 22px;
+    border-radius: 15px;
+    background-color: #E45E41;
+    
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 15px;
+    
+}
+
+.square-container > :nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.square-container > :nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+button {
+    height: 10%;
+    border-radius: 8px;
+    background-color: #2E2E30;
+}
+
