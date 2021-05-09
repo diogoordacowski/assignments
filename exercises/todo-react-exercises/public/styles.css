@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.app-container {
+    width:250px;
+    border: 1px solid black;
+    padding: 15px 15px 30px 15px ;
+    position: relative;
+    top:15px;
+    left:25px;
+    border-radius: 12px;
+    
+}
+
+.todo-item-container {
+    display: flex;
+
+    border-bottom: 1px solid black;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-left:10px ;
+}
+
+h1 {
+    text-align: center;
+    padding:5px;
+}
+
+
+p {
+    padding-left: 25px;
+}
