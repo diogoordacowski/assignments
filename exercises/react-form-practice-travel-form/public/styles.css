@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    line-height: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form, .summary-container {
+    position: relative;
+    top:25px;
+    left:20px;
+    width: 450px;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.submit-container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+}
+
+input, select {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+button {
+    width: 100px;
+    height: 2.5em;
+    font-size: larger;
+}
+
+.red {
+    color: red;
+    font-weight: 100;
+}
