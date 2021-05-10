@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 35px;
+}
+
+form {
+    position: relative;
+    left: 40px;
+    top:40px;
+    width: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 3px 3px 3px darkgray;
+}
+
+.input-container {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid darkgrey;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+input, select {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.red {
+    color:red;
+}
