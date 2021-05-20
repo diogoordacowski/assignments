@@ -12,17 +12,18 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}")
+        axios.get(`https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
             .then(response => {
                 this.setState({
                     color: response.data.new_color
                 })
                 console.log(response.data)
+                console.log(new Date().getTime())
             })
     }
 
     changeColor() {
-        axios.get("https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}")
+        axios.get(`https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
             .then(response => {
                 this.setState({
                     color: response.data.new_color
