@@ -1,10 +1,17 @@
 import React, {Component} from "react"
+import Proptype from "prop-types"
 
 class ClassCard extends Component {
     static defaultProps = {
-        backgroundColor: "black",
+        backgroundColor: "black", 
         height: 150,
         width: 150
+    }
+
+    static propTypes = {
+        backgroundColor: Proptype.oneOf(["yellow", "orange", "pink"]), 
+        height: Proptype.number.isRequired,
+        width: Proptype.number.isRequired
     }
 
     render() {

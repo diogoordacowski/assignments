@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 function FunctionalCard (props) {
 
@@ -13,10 +14,17 @@ function FunctionalCard (props) {
     )
 }
 
+FunctionalCard.propTypes = {
+    backgroundColor: PropTypes.oneOf(["blue","red"]), 
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired
+
+}
+
 FunctionalCard.defaultProps = {
-    backgroundColor: "black",
+    backgroundColor: "black", 
     height: 150,
-    width: 300
+    width: 300 
 }
 
 export default FunctionalCard
