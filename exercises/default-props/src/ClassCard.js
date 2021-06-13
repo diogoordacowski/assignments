@@ -3,7 +3,7 @@ import React, {Component} from "react"
 class ClassCard extends Component {
     static defaultProps = {
         backgroundColor: "black",
-        height: 300,
+        height: 150,
         width: 150
     }
 
@@ -18,8 +18,8 @@ class ClassCard extends Component {
             <div style={styles}></div>
         )
     }
-
 }
+
 
 
 export default ClassCard
