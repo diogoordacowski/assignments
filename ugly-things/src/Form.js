@@ -1,32 +1,21 @@
-import React, { Component } from "react"
+import React from "react"
+import { ThingsContextConsumer } from "./thingsContext"
 
-class Form extends Component {
+function Form(props) {
 
-    state = {
-        title: " ",
-        imgURL: " ",
-        description: " ",
-        uglyThings: []
-    }
+    return (
+        <ThingsContextConsumer>
+            {context => (
+                <form name="thingsForm" onSubmit={context.submitThing}>
+                    <input onChange={context.handleChange} name="title" type="text" placeholder="title" />
+                    <input onChange={context.handleChange} name="imgURL" type="text" placeholder="imgURL" />
+                    <input onChange={context.handleChange} name="description" type="text" placeholder="description" />
+                    <button>Add Ugly Thing</button>
+                </form>
+            )}
+        </ThingsContextConsumer>
 
-   
-    handleChange = (e) => {
-        const {name, value} = e.target
-        this.setState({[name]: value})
-    }
- 
-
-
-    render() {
-        return (
-            <form name="thingsForm">
-                <input onChange={this.handleChange} name="title" type="text" placeholder="title" />
-                <input onChange={this.handleChange} name="imgURL" type="text" placeholder="imgURL" />
-                <input onChange={this.handleChange} name="description" type="text" placeholder="description" />
-                <button>Add Ugly Thing</button>
-            </form>
-        )
-    }
+    )
 }
 
 

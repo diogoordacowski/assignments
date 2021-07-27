@@ -1,7 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./Form"
+import App from "./App"
+import {ThingsContextProvider} from "./thingsContext"
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(
+    <ThingsContextProvider>
+        <App />
+    </ThingsContextProvider>
+    , document.getElementById("root"))
 
 
