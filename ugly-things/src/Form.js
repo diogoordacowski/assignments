@@ -8,7 +8,7 @@ function Form(props) {
             {context => (
                 <form name="thingsForm" onSubmit={context.submitThing}>
                     <input onChange={context.handleChange} name="title" type="text" placeholder="title" />
-                    <input onChange={context.handleChange} name="imgURL" type="text" placeholder="imgURL" />
+                    <input onChange={context.handleChange} name="imgUrl" type="text" placeholder="image url" />
                     <input onChange={context.handleChange} name="description" type="text" placeholder="description" />
                     <button>Add Ugly Thing</button>
                 </form>

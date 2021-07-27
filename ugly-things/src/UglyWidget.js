@@ -27,7 +27,7 @@ class UglyWidget extends Component {
             return (
                 <form name="thingsForm" >
                     <input name="title" type="text" placeholder={this.props.title} />
-                    <input name="imgURL" type="text" placeholder={this.props.imgUrl} />
+                    <input name="imgUrl" type="text" placeholder={this.props.imgUrl} />
                     <input name="description" type="text" placeholder={this.props.description} />
                     <button name="editOn" onClick={this.booleanToggle}>Cancel</button>
                     <button>Save</button>
