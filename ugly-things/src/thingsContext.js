@@ -1,25 +1,54 @@
 import axios from "axios"
 import React, { Component } from "react"
 const { Provider, Consumer } = React.createContext()
-const baseUrl = "https://api.vschool.io/diogo/thing"
+const baseUrl = "https://api.vschool.io/diogo/thing/"
 
 class ThingsContextProvider extends Component {
+    constructor() {
+        super()
+        this.state = {
+            title: " ",
+            imgUrl: " ",
+            description: " ",
+            uglyThings: []
+        }
 
-    state = {
-        title: " ",
-        imgUrl: " ",
-        description: " ",
-        uglyThings: []
     }
 
-    componentDidMount() {
+    deleteThing = (e) => {
+        const uglyThings = this.state.uglyThings
+        const { id } = e.target
+        console.log(`${id} was clicked from deleteThing()`)
+
+        let deleteThingIndex = uglyThings.findIndex((thing) => (
+            thing._id === id
+        ))
+
+        console.log(deleteThingIndex)
+
+        axios.delete(baseUrl + id,)
+            .then(res => {
+                console.log(res.data, id)
+                uglyThings.splice(deleteThingIndex, 1)
+                this.setState({
+                    uglyThings: uglyThings
+                })
+            })
+            .catch(err => console.log(err))
+    }
+
+    saveThing = (e) => {
+        e.preventDefault()
+        console.log("thing was saved")
+    }
+
+    componentDidMount = () => {
         axios.get(baseUrl)
             .then(res => this.setState({
                 uglyThings: res.data
             }))
             .catch(err => console.log(err))
 
-            console.log(`component did mount`)
     }
 
     handleChange = (e) => {
@@ -34,21 +63,27 @@ class ThingsContextProvider extends Component {
             title: this.state.title,
             imgUrl: this.state.imgUrl,
             description: this.state.description
-            })
-            .then( res => {
+        })
+            .then(res => {
                 this.setState(prevState => {
                     return {
-                        uglyThings: [...prevState.uglyThings, res.data ]
+                        uglyThings: [...prevState.uglyThings, res.data]
                     }
                 })
             })
             .catch(err => (console.log(err)))
     }
 
+
     render() {
-       
+
         return (
-            <Provider value={{ handleChange: this.handleChange, submitThing: this.submitThing, uglyThings: this.state.uglyThings }} >
+            <Provider value={{ 
+                handleChange: this.handleChange, 
+                submitThing: this.submitThing, 
+                deleteThing: this.deleteThing,
+                saveThing: this.saveThing, 
+                uglyThings: this.state.uglyThings }} >
                 {this.props.children}
             </Provider>
         )
