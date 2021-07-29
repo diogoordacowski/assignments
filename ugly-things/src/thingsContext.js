@@ -37,9 +37,33 @@ class ThingsContextProvider extends Component {
             .catch(err => console.log(err))
     }
 
-    saveThing = (e) => {
-        e.preventDefault()
-        console.log("thing was saved")
+    saveThing = (id,title, imgUrl, description) => {
+      
+        const updates = {
+            title: title,
+            imgUrl:imgUrl,
+            description: description
+        }
+        
+        axios.put(baseUrl + id, updates)
+            .then(res => (console.log(res)))
+            .catch(err => (console.log(err))) 
+
+        const savedUglyThings = this.state.uglyThings.map( thing => {
+            if (thing._id === id) {
+                thing.title = title
+                thing.imgUrl = imgUrl
+                thing.description = description
+
+                return thing
+            } else {
+               return thing
+            }
+        })
+
+        this.setState({
+            uglyThings: savedUglyThings
+        })
     }
 
     componentDidMount = () => {
@@ -78,12 +102,13 @@ class ThingsContextProvider extends Component {
     render() {
 
         return (
-            <Provider value={{ 
-                handleChange: this.handleChange, 
-                submitThing: this.submitThing, 
+            <Provider value={{
+                handleChange: this.handleChange,
+                submitThing: this.submitThing,
                 deleteThing: this.deleteThing,
-                saveThing: this.saveThing, 
-                uglyThings: this.state.uglyThings }} >
+                saveThing: this.saveThing,
+                uglyThings: this.state.uglyThings
+            }} >
                 {this.props.children}
             </Provider>
         )
