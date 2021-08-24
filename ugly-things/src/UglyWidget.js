@@ -95,6 +95,7 @@ class UglyWidget extends Component {
                     <button name="editOn" onClick={this.booleanToggle}>Edit</button>
                     <button name="commentOn" onClick={this.commentClick}>Comment</button>
                     <button name="delete" onClick={this.props.deleteThing} id={this.props.id}>Delete</button>
+                    <CommentWidget commentOn={this.state.commentOn} />
                     
                     {/* How to store comments:
                         1) Each comment is an object that holds a username: and comment: property
@@ -134,7 +135,6 @@ class UglyWidget extends Component {
                         5) splice the comments array in state specifically for the variable, for 1 index
                         6) set the comments state to this now modified spliced array
                     */}
-                    <CommentWidget />
 
                 </div>
             )
