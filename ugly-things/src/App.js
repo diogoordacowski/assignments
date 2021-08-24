@@ -17,6 +17,7 @@ function App(props) {
                 baseUrl={context.baseUrl}
                 deleteThing={context.deleteThing}
                 saveThing={context.saveThing}
+                commentThing={context.commentThing}
             />)
         ) }
     </ThingsContextConsumer>

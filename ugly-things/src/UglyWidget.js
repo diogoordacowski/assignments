@@ -57,6 +57,17 @@ class UglyWidget extends Component {
 
     }
 
+    commentClick = (e) => {
+
+        this.booleanToggle(e)
+
+        console.log('end')
+
+       
+
+        this.props.commentThing()
+    }
+
     render() {
         if (this.state.editOn) {
             return (
@@ -82,7 +93,7 @@ class UglyWidget extends Component {
                     <h2><u>Description:</u> {this.props.description}</h2>
                     <h4>{this.props.id}</h4>
                     <button name="editOn" onClick={this.booleanToggle}>Edit</button>
-                    <button name="commentOn" onClick={this.booleanToggle}>Comment</button>
+                    <button name="commentOn" onClick={this.commentClick}>Comment</button>
                     <button name="delete" onClick={this.props.deleteThing} id={this.props.id}>Delete</button>
                     
                     {/* How to store comments:

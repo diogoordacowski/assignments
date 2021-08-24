@@ -41,7 +41,7 @@ class ThingsContextProvider extends Component {
       
         const updates = {
             title: title,
-            imgUrl:imgUrl,
+            imgUrl: imgUrl,
             description: description
         }
         
@@ -98,6 +98,11 @@ class ThingsContextProvider extends Component {
             .catch(err => (console.log(err)))
     }
 
+    commentThing = (e) => {
+
+        console.log('commentThing Worked')
+    }
+
 
     render() {
 
@@ -107,6 +112,7 @@ class ThingsContextProvider extends Component {
                 submitThing: this.submitThing,
                 deleteThing: this.deleteThing,
                 saveThing: this.saveThing,
+                commentThing: this.commentThing,
                 uglyThings: this.state.uglyThings
             }} >
                 {this.props.children}
