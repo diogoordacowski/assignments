@@ -1,33 +1,40 @@
-import React from "react"
+import React, {Component} from "react" 
 
-function CommentWidget(props) {
+class CommentWidget extends Component {
 
-    console.log(props.commentOn)
-
-    const commentOn = props.commentOn
-
-    if (commentOn) {
-
-        return (
-            <div>
-                <input type="text" placeholder="username" name="userName" />
-                <input type="text" placeholder="insert your comments" name="comment" />
-                <button>Cancel</button>
-                <button>Submit Comment</button>
-            </div>
-
-        )
-
-    } else {
-        return (
-            <div>
-                <p><em>There are no comments yet</em></p>
-            </div>
-        )
+    constructor(props) {
+        super(props)
+        this.state = {
+            comments: []
+        }
     }
 
+    render() {
+        console.log(this.props.commentOn)
+        
+        const commentOn = this.props.commentOn
 
+        if (commentOn) {
+    
+            return (
+                <div>
+                    <input type="text" placeholder="username" name="userName" />
+                    <input type="text" placeholder="insert your comments" name="comment" />
+                    <button>Cancel</button>
+                    <button>Submit Comment</button>
+                </div>
+    
+            )
+    
+        } else {
+            return (
+                <div>
+                    <p><em>There are no comments yet</em></p>
+                </div>
+            )
+        }
 
+    }
 
     /* 
     this will receive props for the username, comment, id, and deleteComment() method
