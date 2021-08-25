@@ -73,11 +73,17 @@ class UglyWidget extends Component {
             return (
                 <div>
                     <form name="thingsForm" >
+
                         <input name="thingTitle" type="text" placeholder={this.props.title} onChange={this.handleChange} />
+
                         <input name="thingImgUrl" type="text" placeholder={this.props.imgUrl} onChange={this.handleChange} />
+
                         <input name="thingDescription" type="text" placeholder={this.props.description} onChange={this.handleChange} />
+
                         <button name="editOn" onClick={this.booleanToggle}>Cancel</button>
+
                         <button name="save" onClick={this.saveClick}>Save</button>
+
                     </form>
 
                     
@@ -95,7 +101,12 @@ class UglyWidget extends Component {
                     <button name="editOn" onClick={this.booleanToggle}>Edit</button>
                     <button name="commentOn" onClick={this.commentClick}>Comment</button>
                     <button name="delete" onClick={this.props.deleteThing} id={this.props.id}>Delete</button>
-                    <CommentWidget commentOn={this.state.commentOn} />
+                    <CommentWidget 
+                        commentOn={this.state.commentOn} 
+                        
+                        booleanToggle={this.booleanToggle}
+                        
+                        handleChange={this.handleChange}/>
                     
                     {/* How to store comments:
                         1) Each comment is an object that holds a username: and comment: property

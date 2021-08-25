@@ -5,12 +5,13 @@ class CommentWidget extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            comments: []
+            comments: [],
+
         }
     }
 
+
     render() {
-        console.log(this.props.commentOn)
         
         const commentOn = this.props.commentOn
 
@@ -18,9 +19,12 @@ class CommentWidget extends Component {
     
             return (
                 <div>
-                    <input type="text" placeholder="username" name="userName" />
-                    <input type="text" placeholder="insert your comments" name="comment" />
-                    <button>Cancel</button>
+                    <input type="text" placeholder="username" name="username" onChange={this.props.handleChange} />
+
+                    <input type="text" placeholder="insert your comments" name="comment" onChange={this.props.handleChange} />
+
+                    <button name="commentOn" onClick={this.props.booleanToggle} >Cancel</button>
+
                     <button>Submit Comment</button>
                 </div>
     
