@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+
 function Form() {
 
     const [inputInfo, setName] = useState({ fName: "", lName: "" })
