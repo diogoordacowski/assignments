@@ -1,8 +1,9 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 function App() {
 
     const [text, setText] = useState("")
+    const [timeRemaining, setTimeRemaining] = useState(10)
 
     function handleChange(e) {
         const { value } = e.target
@@ -20,15 +21,24 @@ function App() {
         return count
     }
 
+    useEffect( () => {
+        if(timeRemaining > 0) {
+            setTimeout(() => { 
+                setTimeRemaining (prevTime => prevTime - 1)
+            }, 1000)
+        }
+    }, [timeRemaining] ) 
+    
+
     return (
-        <div class="gamebox">
+        <div className="gamebox">
             <h1>Speed Typing Game!</h1>
             <textarea 
                 onChange={handleChange} 
                 name="text" 
                 value={text} />
-            <h4>Time Remaining:</h4>
-            <div class="buttonbox">
+            <h4>Time Remaining: {timeRemaining} </h4>
+            <div className="buttonbox">
                 <button onClick={() => countWords(text)}>Start Game! </button>
             </div>
             <h1>Score:</h1>
