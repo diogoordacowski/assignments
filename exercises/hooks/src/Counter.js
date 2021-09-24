@@ -22,14 +22,16 @@ function Counter() {
 
     useEffect(() => {
 
-        const intervalId = setInterval(() => {
-            setAutoCount(prevAutoCount => prevAutoCount + 1)
+            const intervalId = setInterval(() => {
             console.log("we are counting every second")
-        }, 1000)
+            setAutoCount(prevAutoCount => prevAutoCount + 1)
+            
+        }, 1100)
 
         return () => {
-            clearInterval(intervalId)
+
             console.log("the component unmounted and this interval ended")
+            clearInterval(intervalId)
         }
 
     }, [])

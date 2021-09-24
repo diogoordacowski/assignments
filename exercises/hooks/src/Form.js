@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 
 
 function Form() {
 
     const [inputInfo, setName] = useState({ fName: "", lName: "" })
     const [contacts, setContacts] = useState([])
+    const inputRef = useRef(null)
 
     function handleChange(e) {
         const { name, value } = e.target
@@ -16,6 +17,9 @@ function Form() {
         e.preventDefault()
 
         setContacts(prevContacts => [...prevContacts, inputInfo])
+        setName({ fName: "", lName: "" })
+        console.log(inputRef) //notice the object that has a current property
+        inputRef.current.focus() //the built-in focus() method on the object that refocuses on the element that has the useRef
     }
 
     const allContacts = contacts.map((contact, i) => <h3 key={i}>{contact.fName} {contact.lName}</h3>)
@@ -27,7 +31,8 @@ function Form() {
             name="fName" 
             value={inputInfo.fName} 
             onChange={handleChange} 
-            placeholder="First Name" />
+            placeholder="First Name"
+            ref= {inputRef} />
 
             <input type="text" 
             name="lName" 
