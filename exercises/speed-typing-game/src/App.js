@@ -10,6 +10,16 @@ function App() {
         setText(value)
     }
 
+    function countWords(phrase) {
+      
+        const wordsArr =  phrase.trim().split(" ")
+        const count = wordsArr.filter(word => word !== "").length
+
+        console.log("count:", count, wordsArr)
+       
+        return count
+    }
+
     return (
         <div class="gamebox">
             <h1>Speed Typing Game!</h1>
@@ -19,7 +29,7 @@ function App() {
                 value={text} />
             <h4>Time Remaining:</h4>
             <div class="buttonbox">
-                <button>Start Game! </button>
+                <button onClick={() => countWords(text)}>Start Game! </button>
             </div>
             <h1>Score:</h1>
 
