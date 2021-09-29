@@ -45,8 +45,6 @@ function App() {
         setisTimeRunning(true)
        }
     }
-    
-    //{() => countWords(text)} - this is to count the words
 
     return (
         <div className="gamebox">
