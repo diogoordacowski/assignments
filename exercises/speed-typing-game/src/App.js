@@ -4,6 +4,7 @@ function App() {
 
     const [text, setText] = useState("")
     const [timeRemaining, setTimeRemaining] = useState(10)
+    const [isTimeRunning, setisTimeRunning] = useState(false)
 
     function handleChange(e) {
         const { value } = e.target
@@ -22,13 +23,16 @@ function App() {
     }
 
     useEffect( () => {
-        if(timeRemaining > 0) {
+        if(isTimeRunning && timeRemaining > 0) {
             setTimeout(() => { 
                 setTimeRemaining (prevTime => prevTime - 1)
             }, 1000)
+        } else if (timeRemaining === 0) {
+            setisTimeRunning(false)
         }
-    }, [timeRemaining] ) 
+    }, [timeRemaining, isTimeRunning] ) 
     
+    //{() => countWords(text)} - this is to count the words
 
     return (
         <div className="gamebox">
@@ -39,7 +43,7 @@ function App() {
                 value={text} />
             <h4>Time Remaining: {timeRemaining} </h4>
             <div className="buttonbox">
-                <button onClick={() => countWords(text)}>Start Game! </button>
+                <button onClick={() => setisTimeRunning(true)}>Start Game! </button>
             </div>
             <h1>Score:</h1>
 
