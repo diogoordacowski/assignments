@@ -47,7 +47,11 @@ function App() {
                 value={text} />
             <h4>Time Remaining: {timeRemaining} </h4>
             <div className="buttonbox">
-                <button onClick={() => setisTimeRunning(true)}>Start Game! </button>
+                <button onClick={() => setisTimeRunning(true)}>
+                    
+                   { (isTimeRunning === false && timeRemaining === 0) ? "Play Again!" : "Start Game!" }  
+                    
+                    </button>
             </div>
             <h1>Score: {answer} </h1>
 
