@@ -2,10 +2,10 @@ import React, {useState, useEffect} from "react"
 
 function App() {
 
-    const startTime = 5
+    const START_TIME = 15
 
     const [text, setText] = useState("")
-    const [timeRemaining, setTimeRemaining] = useState(startTime)
+    const [timeRemaining, setTimeRemaining] = useState(START_TIME)
     const [isTimeRunning, setisTimeRunning] = useState(false)
     const [answer, setAnswer] = useState("tbd")
 
@@ -35,6 +35,16 @@ function App() {
             setAnswer(countWords(text))
         }
     }, [timeRemaining, isTimeRunning] ) 
+
+    function toggleTimer() {
+       if (isTimeRunning === false && timeRemaining > 0) {
+           setisTimeRunning(true)
+       } else if (isTimeRunning === false && timeRemaining === 0 ) {
+        setTimeRemaining(START_TIME)
+        setText("")    
+        setisTimeRunning(true)
+       }
+    }
     
     //{() => countWords(text)} - this is to count the words
 
@@ -44,14 +54,16 @@ function App() {
             <textarea 
                 onChange={handleChange} 
                 name="text" 
-                value={text} />
+                value={text}
+                disabled={!isTimeRunning} />
             <h4>Time Remaining: {timeRemaining} </h4>
             <div className="buttonbox">
-                <button onClick={() => setisTimeRunning(true)}>
+                {isTimeRunning ? null : <button onClick={toggleTimer}>
                     
-                   { (isTimeRunning === false && timeRemaining === 0) ? "Play Again!" : "Start Game!" }  
-                    
-                    </button>
+                    { (isTimeRunning === false && timeRemaining === 0) ? "Play Again!" : "Start Game!" }  
+                     
+                     </button>  }
+                
             </div>
             <h1>Score: {answer} </h1>
 
