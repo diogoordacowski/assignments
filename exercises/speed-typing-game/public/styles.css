@@ -1,7 +1,6 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    background-color:#CDB4DB;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -9,6 +8,25 @@ h1, h4 {
     color:black;
     text-align: center;
     background-color: #A2D2FF;
+}
+
+.theme-button {
+    display: flex;
+    justify-content: end;
+    padding: 5px 0px 5px 0px;
+    background-color: #A2D2FF;
+}
+
+
+
+.dark-theme {
+    background-color: #333333;
+    color: whitesmoke;
+}
+
+.light-theme {
+    background-color: whitesmoke;
+    color: #333333;
 }
 
 .gamebox {
@@ -21,7 +39,7 @@ h1, h4 {
     position:relative;
     top:25px;
     left:25px;
-    background-color:#A2D2FF;
+    background-color: #A2D2FF;
 }
 
 textarea {
@@ -45,7 +63,6 @@ textarea:disabled {
 }
 
 button {
-    background-color: #FFAFCC;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 3em;
 }
