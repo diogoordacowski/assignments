@@ -1,9 +1,15 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function App() {
 
     return (
-        <h1>Hello Motha' Fucka'</h1>
+        <div>
+            <Link to="/" >Home</Link>
+            <Link to="/about" >About</Link>
+            <Link to="/services" >Services</Link>
+        </div>
+
     )
 }
 
