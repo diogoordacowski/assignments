@@ -1,29 +1,37 @@
 import React from "react"
-import { Link, Switch, Route } from "react-router-dom"
+import { Switch, Route } from "react-router-dom"
 import Home from "./Home"
 import About from "./About"
+import Header from "./Header"
 import Services from "./Services"
+import ServiceDetails from "./ServiceDetails"
 
 function App() {
 
     return (
         <div>
-            <Link to="/" >Home</Link>
-            <Link to="/about" >About</Link>
-            <Link to="/services" >Services</Link>
+            <Header />
 
             <Switch>
+                
                 <Route exact path="/">
                     <Home />
                 </Route>
+
                 <Route path="/about">
                     <About />
                 </Route>
-                <Route path="/services">
+
+                <Route exact path="/services">
                     <Services />
                 </Route>
-            </Switch>
+                
+                <Route path="/services/:serviceId">
+                    <ServiceDetails />
+                </Route>
 
+            </Switch>
+            
         </div>
 
     )

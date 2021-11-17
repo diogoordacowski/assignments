@@ -5,6 +5,7 @@ import servicesObject from "./servicesObject"
 function ServiceDetails() {
     
     const {serviceId} = useParams()
+    console.log(serviceId)
     //usually would be an AJAX database request here, but for this example, we'll use the services object instead
     
     const thisService = servicesObject.find(service => service._id === serviceId)
