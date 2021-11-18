@@ -5,6 +5,7 @@ import About from "./About"
 import Header from "./Header"
 import Services from "./Services"
 import ServiceDetails from "./ServiceDetails"
+import Authenticated from "./Authenticated"
 
 function App() {
 
@@ -31,6 +32,10 @@ function App() {
                 
                 <Route path="/services/:serviceId">
                     <ServiceDetails />
+                </Route>
+
+                <Route exact path="/authenticated">
+                    <Authenticated />
                 </Route>
 
             </Switch>
